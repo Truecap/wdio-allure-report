@@ -32,6 +32,9 @@ describe("Verify tabs on home page without login", () => {
   it("should click on network tab and redirected to network page", async () => {
     await homePage.launchWebApp();
     await homePage.clickNetworklink();
-    await expect(browser).toHaveUrlContaining('/global-ip-network')
+    await expect(homePage.headerOnNetworkPage).toHaveText(
+      "The Global, Private Network Built for Real-Time Comms."
+    );
   });
 });
+

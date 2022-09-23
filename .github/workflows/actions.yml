@@ -40,7 +40,6 @@ jobs:
         - name: Allure Report action from marketplace
           uses: simple-elf/allure-report-action@master
           if: always()
-            #id: allure-report
           with:
               allure_results: allure-results
               gh_pages: gh-pages
@@ -56,23 +55,4 @@ jobs:
               PUBLISH_BRANCH: gh-pages
               PUBLISH_DIR: allure-history
         
-
-
-        # - name: Create Report
-        #   if: always()
-        #   run: npm run allure:generate
-        # - name: Upload artifact allure-report
-        #   uses: actions/upload-artifact@v1
-        #   if: always()
-        #   with:
-        #       name: allure-report
-        #       path: ./allure-report
-        # - name: Deploy report
-        #   uses: peaceiris/actions-gh-pages@v2
-        #   if: always()
-        #   with:
-        #       ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
-        #       BRANCH: gh-pages
-        #       FOLDER: allure-report 
-         
           

@@ -1,6 +1,5 @@
 const homePage = require("../pageobjects/TelnyxHomePage.js");
-const BasePage = require('./BasePage')
-// import {BasePage} from './BasePage';
+const BasePage = require("./BasePage");
 const email = "testsne13@gmail.com";
 const password = "Test1234test!";
 const invalidEmail = "someemail@gmail.com";

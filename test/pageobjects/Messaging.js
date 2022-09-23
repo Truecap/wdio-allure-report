@@ -23,12 +23,10 @@ class MessagingPage {
   async chooseEuro() {
     await this.currencyDrpDwn.click();
     await this.euroFromDrpDwnCurrency.click();
-
   }
   async chooseUkraine() {
     await this.countryDrpDwn.click();
     await this.ukraineFromDrpDwn.click();
   }
-  
 }
 module.exports = new MessagingPage();

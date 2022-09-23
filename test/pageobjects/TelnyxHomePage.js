@@ -1,12 +1,9 @@
-
-
 class HomePage {
-  
   get logInBtn() {
     return $('[id="dialogAudio"] +a +a');
   }
   async clickLoginButton() {
-    await this.logInBtn.click()
+    await this.logInBtn.click();
   }
   get closeButtonCookie() {
     return $('[aria-label="close and deny"]~div>div>button');
@@ -16,16 +13,15 @@ class HomePage {
     return $('[class*="khahzD"]:last-of-type');
   }
   async openPricingDrpDwn() {
-    await this.pricingTab.moveTo();  
+    await this.pricingTab.moveTo();
   }
-  
   get smsApiPricingDrpDwn() {
     return $('header [href="/pricing/messaging"]');
   }
   async openMessagingPage() {
     await this.pricingTab.moveTo();
     await this.smsApiPricingDrpDwn.click();
-    await expect(browser).toHaveUrl('https://telnyx.com/pricing/messaging')
+    await expect(browser).toHaveUrl("https://telnyx.com/pricing/messaging");
   }
   //solutionstab
   get solutionsTab() {
@@ -43,7 +39,9 @@ class HomePage {
   async openContactCenterPage() {
     await this.openSolutionsDrpDwn();
     await this.contactCenterBtnSolutionsDrpDwn.click();
-    await expect(browser).toHaveUrl('https://telnyx.com/use-cases/contact-center');
+    await expect(browser).toHaveUrl(
+      "https://telnyx.com/use-cases/contact-center"
+    );
   }
   //resourceTab
   get resourcesTab() {
@@ -65,8 +63,7 @@ class HomePage {
   async openBlogPage() {
     await this.openResourcesDrpDwn();
     await this.blogBtnResorcesDrpDwn.click();
-    await expect(browser).toHaveUrl('https://telnyx.com/resources')
-
+    await expect(browser).toHaveUrl("https://telnyx.com/resources");
   }
   //companyTab
   get companyTab() {
@@ -98,8 +95,7 @@ class HomePage {
   get headerOnNetworkPage() {
     return $('h1[class*="clNvhv gVIlze"]');
   }
-  
-  
+  //
   get footerAboutUsBtn() {
     return $('//*[text()= "About Us"]');
   }
@@ -113,7 +109,7 @@ class HomePage {
     await this.homePagebutton.click();
   }
   get homePagePicture() {
-    return $('main>div');
+    return $("main>div");
   }
 
   get searchIpnutBlogPage() {
@@ -123,20 +119,18 @@ class HomePage {
     await this.searchIpnutBlogPage.addValue("number pool");
     await browser.keys("Enter");
   }
-  
+
   async openAboutUsPage() {
     await this.footerAboutUsBtn.scrollIntoView();
     await this.footerAboutUsBtn.click();
     await expect(this.aboutUsHeader).toBeDisplayed();
   }
   async launchWebApp() {
-    await browser.url('https://telnyx.com/');
+    await browser.url("https://telnyx.com/");
     await browser.setWindowSize(1920, 1080);
     if (await this.closeButtonCookie.isDisplayed()) {
       await this.closeButtonCookie.click();
     }
   }
-
-  
 }
 module.exports = new HomePage();
