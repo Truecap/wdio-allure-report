@@ -1,0 +1,39 @@
+{
+    "name": "webdriverio-tests",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@wdio/allure-reporter": "^7.24.0",
+        "@wdio/cli": "^7.24.0",
+        "@wdio/firefox-profile-service": "^7.24.0",
+        "@wdio/local-runner": "^7.24.0",
+        "@wdio/mocha-framework": "^7.24.0",
+        "@wdio/selenium-standalone-service": "^7.24.0",
+        "@wdio/spec-reporter": "^7.24.0",
+        "chromedriver": "^105.0.0",
+        "chai": "^4.3.6",
+        "wdio-chromedriver-service": "^7.3.2"
+        
+    },
+    "scripts": {
+        "wdio": "wdio run wdio.conf.js",
+        "test:chrome:ui": "npx wdio config/wdio.chrome.conf.js",
+        "test:chrome:headless": "npx wdio config/wdio.chrome.headless.conf.js",
+        "test:chrome:headless:login": "npx wdio config/wdio.chrome.headless.conf.js --spec Login.js",
+        "test:chrome:ui:login": "npx wdio config/wdio.chrome.conf.js --spec Login.js",
+        "test:firefox:ui:login": "npx wdio config/wdio.firefox.conf.js --spec Login.js",
+        "test:firefox:headless:login": "npx wdio config/wdio.firefox.headless.conf.js --spec Login.js",
+        "test:firefox:headless": "npx wdio config/wdio.firefox.headless.conf.js",
+        "test:firefox:ui": "npx wdio config/wdio.firefox.conf.js",
+        "test:local": "npx wdio config/wdio.chrome.conf.js",
+        "test:headless": "npx wdio config/wdio.chrome.headless.conf.js",
+        "alltests": "npx wdio run ./wdio.conf.js --spec",
+        "login": "npx wdio run ./wdio.conf.js --spec Login.js",
+        "allure:generate": "npx allure generate allure-results --clean",
+        "report": "npx allure generate reports/ui/allure-results --clean -o reports/ui/allure-report && allure open reports/ui/allure-report",
+        "clear": "rm -r reports/** || true"
+    },
+    "dependencies": {
+        "allure-commandline": "^2.18.1"
+    }
+}
