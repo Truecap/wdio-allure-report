@@ -10,10 +10,9 @@
         "@wdio/mocha-framework": "^7.24.0",
         "@wdio/selenium-standalone-service": "^7.24.0",
         "@wdio/spec-reporter": "^7.24.0",
-        "chromedriver": "^106.0.0",
         "chai": "^4.3.6",
+        "chromedriver": "^106.0.1",
         "wdio-chromedriver-service": "^8.0.0"
-        
     },
     "scripts": {
         "wdio": "wdio run wdio.conf.js",
