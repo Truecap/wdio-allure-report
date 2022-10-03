@@ -6,6 +6,5 @@ describe("Verify home page button", () => {
     await homePage.openAboutUsPage();
     await homePage.clickHomePageBtn();
     await expect(homePage.homePagePicture).toBeDisplayed();
-   
   });
 });

@@ -1,7 +1,6 @@
 const homePage = require("../pageobjects/TelnyxHomePage.js");
 
 describe("Verify tabs on home page without login", () => {
-
   it("should open pop-upwindow pricing", async () => {
     await homePage.launchWebApp();
     await homePage.openPricingDrpDwn();
@@ -37,4 +36,3 @@ describe("Verify tabs on home page without login", () => {
     );
   });
 });
-

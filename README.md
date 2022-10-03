@@ -17,15 +17,15 @@
 
 # You should have installeted browsers (firefox/chrome) for local running ui tests
 
--You can start your test suite by using the run command and pointing to the WebdriverIO config that you just created:
+- You can start your test suite by using the run command and pointing to the WebdriverIO config that you just created:
 
 npx wdio run ./wdio.conf.js
 
--If you like to run specific test files you can add a --spec parameter:
+- If you like to run specific test files you can add a --spec parameter:
 
 npx wdio run ./wdio.conf.js --spec example.e2e.js
 
--Or you can use npm run "scripts"
+- Or you can use npm run "scripts"
 
 ## Allure-report
 

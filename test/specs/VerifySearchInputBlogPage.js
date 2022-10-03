@@ -5,8 +5,6 @@ describe("Verify search input on blog page", () => {
     await homePage.launchWebApp();
     await homePage.openBlogPage();
     await homePage.find();
-    await expect(browser).toHaveUrlContaining(
-      "/search?q=number%20pool"
-    );
+    await expect(browser).toHaveUrlContaining("/search?q=number%20pool");
   });
 });
