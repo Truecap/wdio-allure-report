@@ -29,7 +29,8 @@
         "alltests": "npx wdio run ./wdio.conf.js --spec",
         "login": "npx wdio run ./wdio.conf.js --spec Login.js",
         "report:generate": "allure generate allure-results -o allure-report --clean",
-        "report:open": "allure open allure-report"
+        "report:open": "allure open allure-report",
+        "update:chrome": "sudo apt-get install -y google-chrome-stable"
     },
     "dependencies": {
         "allure-commandline": "^2.18.1"

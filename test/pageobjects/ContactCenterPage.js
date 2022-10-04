@@ -8,6 +8,7 @@ class ContactCenterPage {
   async clickPhoneCallsBtn() {
     await this.phoneCallsButton.scrollIntoView();
     await this.phoneCallsButton.click();
+    await this.phoneCallsHeader.waitForDisplayed();
   }
   async validatePhoneCallsButton() {
     await expect(this.phoneCallsHeader).toBeDisplayed();
@@ -23,6 +24,7 @@ class ContactCenterPage {
   }
   async clickMessagesBtn() {
     await this.textMessagesButton.click();
+    await this.textMessagesHeader.waitForDisplayed();
   }
   async validateTextMessagesButton() {
     await expect(this.textMessagesHeader).toBeDisplayed();
@@ -36,6 +38,7 @@ class ContactCenterPage {
   }
   async clickBrowserBasedBtn() {
     await this.browserBasedCommsButton.click();
+    await this.browserBasedCommsHeader.waitForDisplayed();
   }
   async validateBassedCommsButton() {
     await expect(this.browserBasedCommsHeader).toBeDisplayed();

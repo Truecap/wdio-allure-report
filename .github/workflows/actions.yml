@@ -13,6 +13,8 @@ jobs:
             node-version: 18
         - name: Install
           run: npm install
+        - name: Update Chrome
+          run: npm run update:chrome
         - name: Test
           # run: npm run test:firefox:headless
           run: npm run test:chrome:headless
