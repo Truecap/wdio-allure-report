@@ -30,7 +30,7 @@
         "login": "npx wdio run ./wdio.conf.js --spec Login.js",
         "report:generate": "allure generate allure-results -o allure-report --clean",
         "report:open": "allure open allure-report",
-        "update:chrome": "sudo apt-get update/sudo apt-get install -y google-chrome-stable"
+        "update:chrome": "sudo apt-get update/apt-get --only-upgrade install google-chrome-stable"
     },
     "dependencies": {
         "allure-commandline": "^2.18.1"
