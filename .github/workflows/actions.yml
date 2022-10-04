@@ -16,7 +16,6 @@ jobs:
         - name: Test
           run: npm run test:firefox:headless
           # run: npm run test:chrome:headless:login
-
         - name: Install allure
           run: npm install -g allure-commandline --save-dev
         
